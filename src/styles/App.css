@@ -1,0 +1,19 @@
+/* === Scrollbar customizada para Tailwind 3 === */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent; /* azul-500 */
+}
+
+/* Scrollbar no Chrome, Edge e Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* azul-500 */
+  border-radius: 9999px;
+}

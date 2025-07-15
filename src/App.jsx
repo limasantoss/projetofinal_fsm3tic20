@@ -3,7 +3,6 @@ import { AppProvider } from './context/AppContext.jsx';
 
 import './styles/App.css';
 import Sidebar from './components/Sidebar.jsx';
-import Header from './components/Header.jsx';
 import CadastroPaciente from './components/CadastroPaciente.jsx';
 import Triagem from './components/Triagem.jsx';
 import PainelTV from './components/PainelTV.jsx';

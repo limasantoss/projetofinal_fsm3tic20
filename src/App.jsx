@@ -7,13 +7,15 @@ import CadastroPaciente from './components/CadastroPaciente.jsx';
 import Triagem from './components/Triagem.jsx';
 import PainelTV from './components/PainelTV.jsx';
 import PainelMedico from './components/PainelMedico.jsx';
+import ModoNoturno from './components/ModoNoturno.jsx';
 
 export default function App() {
   return (
     <BrowserRouter>
       <AppProvider>
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen bg-gray-100 dark:bg-gray-900 dark:text-white min-h-screen">
           <Sidebar />
+          <ModoNoturno />
           <main className="flex-1 p-4 overflow-auto">
             <Routes>
               <Route path="/" element={<CadastroPaciente />} />

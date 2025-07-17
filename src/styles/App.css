@@ -4,6 +4,11 @@
   scrollbar-color: #3b82f6 transparent; /* azul-500 */
 }
 
+/* adicionando um modo noturno */
+.dark .custom-scrollbar {
+  scrollbar-color: rgba(1, 2, 3, 0.5) transparent;
+}
+
 /* Scrollbar no Chrome, Edge e Safari */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;

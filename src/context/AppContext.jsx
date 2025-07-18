@@ -1,18 +1,25 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
-
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [pacientes, setPacientes] = useState(() => {
-  const salvos = localStorage.getItem("pacientes");
-  return salvos ? JSON.parse(salvos) : [];
-});
-  const [emTriagem, setEmTriagem] = useState(null);
-useEffect(() => {
-  localStorage.setItem("pacientes", JSON.stringify(pacientes));
-}, [pacientes]);
+    const salvos = localStorage.getItem("pacientes");
+    return salvos ? JSON.parse(salvos) : [];
+  });
 
+  const [emTriagem, setEmTriagem] = useState(() => {
+    const salvo = localStorage.getItem("emTriagem");
+    return salvo ? JSON.parse(salvo) : null;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("pacientes", JSON.stringify(pacientes));
+  }, [pacientes]);
+
+  useEffect(() => {
+    localStorage.setItem("emTriagem", JSON.stringify(emTriagem));
+  }, [emTriagem]);
 
   function cadastrarPaciente(nome, motivo) {
     const senha = (pacientes.length + 1).toString().padStart(3, "0");

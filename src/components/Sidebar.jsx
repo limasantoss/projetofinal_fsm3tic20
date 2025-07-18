@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 
 const links = [
-  { to: "/", label: "Cadastro Paciente", icon: "📝" },
-  { to: "/triagem", label: "Triagem", icon: "🩺" },
-  { to: "/painel-tv", label: "Painel TV", icon: "📺" },
-  { to: "/painel-medico", label: "Painel Médico", icon: "👨‍⚕️" },
+  { to: "/", label: "Cadastro Paciente" },
+  { to: "/triagem", label: "Triagem"},
+  { to: "/painel-tv", label: "Painel TV"},
+  { to: "/painel-medico", label: "Painel Médico"},
 ];
 
 export default function Sidebar() {
